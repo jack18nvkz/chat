@@ -1,0 +1,12 @@
+.text {
+    width: max-content;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    float: left;
+    flex-grow: 3;
+}

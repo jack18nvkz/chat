@@ -1,0 +1,7 @@
+.leftBar {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+}

@@ -1,0 +1,17 @@
+.inputText {
+    margin: 0 3px;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    font-size: 18px;
+    resize: none;
+    background-color: #333333;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.inputText::-webkit-scrollbar {
+    display: none;
+}

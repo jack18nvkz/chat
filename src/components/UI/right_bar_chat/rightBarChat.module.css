@@ -1,0 +1,7 @@
+.rightBarChat {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(6, 30, 38), rgb(3, 42, 55));
+}
