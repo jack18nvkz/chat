@@ -16,10 +16,11 @@ wss.on('connection', connection => {
         let data;
 
         try{
-            data = JSON.parse(data);
+            data = JSON.parse(message);
+            console.log(data);
         }catch (e){
             console.log("Invalid JSON");
-            data ={};
+            data = {};
         }
 
         switch (data.type){
@@ -40,9 +41,26 @@ wss.on('connection', connection => {
                         success: true
                     });
                 }
+
+                break;
+
+            case 'message':
+                console.log(data);
+                break;
+
+            default:
+                sendTo(connection, {
+                    type: 'error',
+                    message: 'Command not found' + data.type
+                });
+
+                break;
         }
     });
 
-    connection.send("Hello from server");
+    connection.on('close', () => {
+        if (connection.name)
+            delete users[connection.name];
+    });
 })
 
